@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Scratch Page - [Your Topic]</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body style="background-color: #f5f5f5;"> <!-- Custom background color -->
+
+  <!-- Navigation link back to professional page -->
+  <nav>
+    <a href="index.html">← Back to Home</a>
+  </nav>
+
+  <!-- Anchors for in-page navigation -->
+  <h1 id="top">Welcome to My Life as Jacob Robison</h1>
+  <p>This page is so you can get to know me better! It includes my resume, some of my favorite hobbies, a video that I watch in my downtime, and a game.</p>
+
+  <ul>
+    <li><a href="#lists">Resume</a></li>
+    <li><a href="#video">Watch This!</a></li>
+    <li><a href="#tableau">Cool Visualization</a></li>
+    <li><a href="#app">My Web App</a></li>
+  </ul>
+
+  <!-- Ordered list with embedded unordered list -->
+  <p class="justify"> <span class="bold">Mission Statement:</span> My goal is to become an Oral Surgeon.</p>
+
+  <ol>
+      <li id="edu" class="resumeListHeading">Education
+          <ul>
+              <li>Foothill highschool</li>
+              <li>Brigham Young Univeristy</li>
+          </ul>
+      </li>
+
+      <li id="exp" class="resumeListHeading">Experience
+          <ul>
+              <li>Owner of Patriotic Flag service</li>
+              <li>Athlete</li>
+          </ul>
+      </li>
+
+      <li id="ski" class="resumeListHeading">Skills
+          <ul>
+              <li>Database design development</li>
+              <li>Entity-Relationship Diagramming </li>
+              <li>Structured Query Language</li>
+              <li>Tableau</li>
+              <li>Excel Solver, Pivot Tables, and Charts</li>
+              <li>HTML, CSS, Bootstrap</li>
+              <li>Flow Chart Diagramming</li>
+              <li>Visual Basic for Applications (VBA) Programming in Excel</li>
+          </ul> 
+      
+
+
+  <!-- Custom-styled divs -->
+  <div class="feature-block">
+    <h2>Some of my hobbies include surfing, running, and anything outdoors.</h2>
+    <img src="images/Track_Photo.jpeg" alt="An image related to your topic" width="400" />
+  </div>
+
+  <!--youtube video-->
+  <div class="feature-block" id="video">
+    <h2>Watch This Video</h2>
+    <iframe width="560" height="315"
+      src="https://www.youtube.com/embed/u6uDJ_qcS60?si=JD5IB87iCgOlcPgz"
+      title="YouTube video player" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen>
+    </iframe>
+  </div>
+  
+  
+
+  <!-- Tableau embed -->
+  <div class="feature-block" id="tableau">
+    <h2>Explore This Tableau Graph</h2>
+    <div class='tableauPlaceholder' id='viz1750134831721' style='position: relative'><noscript><a href='#'><img alt='Is Your County Obese?                            Select your county to see how it compares with other counties in the country                         ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Re&#47;Regional_17501347036940&#47;Obesity&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='Regional_17501347036940&#47;Obesity' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Re&#47;Regional_17501347036940&#47;Obesity&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1750134831721');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else { vizElement.style.width='100%';vizElement.style.height='827px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+  </div>
+
+  <!-- Link to your web app -->
+  <div class="feature-block" id="app">
+    <h2>Try My Web App</h2>
+    <p><a href="game.html">Click here to launch it!</a></p>
+  </div>
+
+  <!-- Anchor back to top -->
+  <footer>
+    <p><a href="#top">Back to top ↑</a></p>
+  </footer>
+
+</body>
+</html>

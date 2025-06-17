@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fortune Cookie Oracle</title>
+  <style>
+    body {
+      font-family: 'Georgia', serif;
+      background: linear-gradient(to bottom, #fceabb, #f8b500);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: #6b3e26;
+      text-shadow: 1px 1px #fff;
+      margin-bottom: 20px;
+    }
+
+    img.cookie {
+      width: 200px;
+      height: auto;
+      cursor: pointer;
+      transition: transform 0.2s;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    img.cookie:active {
+      transform: scale(1.05) rotate(3deg);
+    }
+
+    .fortune {
+      margin-top: 20px;
+      font-size: 1.25rem;
+      padding: 12px 24px;
+      background: #fff8dc;
+      border: 2px dashed #d2691e;
+      border-radius: 8px;
+      max-width: 80%;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      display: none;
+    }
+
+    .reveal {
+      animation: fadeIn 0.8s ease-in-out forwards;
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .footer {
+      position: absolute;
+      bottom: 20px;
+      font-size: 0.9rem;
+      color: #6b3e26;
+    }
+  </style>
+</head>
+<body>
+  <h1>🧧 Fortune Cookie Oracle</h1>
+
+  <!-- Real image of a fortune cookie -->
+  <img class="cookie" src="images/cookie.jpeg" alt="Fortune Cookie" onclick="crackCookie()" />
+
+  <div id="fortune" class="fortune"></div>
+  <div class="footer">Click the cookie to reveal your fortune</div>
+
+  <script>
+    const fortunes = [
+      "The early bird gets the worm, but the second mouse gets the cheese.",
+      "You will find unexpected treasure in an old drawer.",
+      "A secret admirer will soon make themselves known.",
+      "Every exit is an entrance to something new.",
+      "Your wisdom will guide someone else’s journey.",
+      "A riddle: I speak without a mouth and hear without ears. What am I?",
+      "Avoid broken cookies — they carry tricky fortunes.",
+      "Luck favors the coder who properly closes their HTML tags.",
+      "In 3...2...1...you will have an idea worth millions.",
+      "The fortune you seek is in another cookie. 🍪"
+    ];
+
+    function crackCookie() {
+      const fortuneBox = document.getElementById('fortune');
+      const fortune = fortunes[Math.floor(Math.random() * fortunes.length)];
+      fortuneBox.textContent = fortune;
+      fortuneBox.classList.remove("reveal");
+      void fortuneBox.offsetWidth; // Restart animation
+      fortuneBox.classList.add("reveal");
+    }
+  </script>
+</body>
+</html>
